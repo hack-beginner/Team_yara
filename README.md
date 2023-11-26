@@ -23,4 +23,4 @@ optional arguments:
                           pdf, email, office, js-html
 ```
 
-Thanks
+For malware samples [click here](https://github.com/cyber-research/APTMalware/tree/master)
