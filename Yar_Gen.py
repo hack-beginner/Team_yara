@@ -1,5 +1,5 @@
 #! /usr/bin/python
-# YarGen Will Automatically Build Yara Rules For Malware Families
+# YaraGenerator Will Automatically Build Yara Rules For Malware Families
 
 
 import re, sys, os, argparse, hashlib, random, email
@@ -217,7 +217,6 @@ def buildYara(options, strings, hashes):
   for h in hashes:
   	ruleOutFile.write("\thash"+str(hashes.index(h))+" = \""+ h + "\"\n")
   ruleOutFile.write("\tsample_filetype = \""+ options.FileType + "\"\n")
-  ruleOutFile.write("\tyaragenerator = \"https://github.com/hack-beginner/Team_yara\"\n")
   ruleOutFile.write("strings:\n")
   for s in randStrings:
     if "\x00" in s:
@@ -321,8 +320,6 @@ def main():
     print "[+] Rule Below:\n"
     with open(options.RuleName + ".yar", 'r') as donerule:
       print donerule.read()
-
-  print "[+] YaraGenerator (C) 2023 Team_yara https://github.com/hack-beginner/Team_yara"
 
 
 if __name__ == "__main__":	
